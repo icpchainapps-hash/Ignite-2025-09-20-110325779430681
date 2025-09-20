@@ -1,0 +1,32 @@
+{
+  "name": "ninja-app",
+  "version": "0.0.1",
+  "private": true,
+  "type": "module",
+  "description": "Root package.json for Motoko backend + Vite/React frontend in ./frontend",
+  "scripts": {
+    "build": "sh -eu -c 'export npm_config_production=false; npm install --no-audit --no-fund; npx vite build'",
+    "dev": "sh -eu -c 'export npm_config_production=false; npm install --no-audit --no-fund; npx vite'",
+    "preview": "npx vite preview",
+    "clean": "rm -rf .dfx node_modules frontend/dist"
+  },
+  "engines": { "node": ">=18" },
+  "dependencies": {
+    "@dfinity/agent": "^2.0.0",
+    "@dfinity/auth-client": "^2.0.0",
+    "@dfinity/principal": "^2.0.0",
+    "@tanstack/react-query": "^5.0.0",
+    "lucide-react": "^0.453.0",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "react-router-dom": "^6.26.0"
+  },
+  "devDependencies": {
+    "@types/react": "^18.3.3",
+    "@types/react-dom": "^18.3.0",
+    "@vitejs/plugin-react": "^4.3.2",
+    "typescript": "^5.4.5",
+    "vite": "^5.4.0"
+  },
+  "packageManager": "npm@10"
+}
